@@ -1,0 +1,14 @@
+Networkex1;
+
+Per garantire i servizi HTTP, SMTP le abbiamo configurate in DMZ(Zona demilitarizzata) in questo modo i servizi saranno disponibili a chiunque cercherà di
+connettersi/comunciare con la nostra rete.
+
+Una intranet con un Server/NAS custodita e posizionata in punti "meno" vulnerabili e più monitorati.
+
+Posizionato un NGFW con servizi di WFA e RS Proxy attivi, in questo modo tutte le connessioni avverranno tramite il firewall dove con WFA si analizza il traffico Web in entrata e in uscita per identificare e bloccare attività sospette o pericolose.
+
+IDS/IPS sistemi utilizzati per il monitoraggio della rete(nello specifico attività o intrusioni sospette)
+
+Abbiamo posizionato L'IPS tra R / G e DMZ in quanto può essere necessaria una reazione da parte nel sistema in casi di eventuali intrusioni, in quanto l'IPS oltre a notificare la security, permette di agire sul caso ed eventualmente bloccare la comunicazione con un eventuale BH.
+
+L'IDS è stato interposto tra R / G e Server/NAS in modo da mantenere una performance più affidabile, in quanto con l'IPS è possibile andare incontro a falsi-positivi, ciò può avere un riscontro negativo in termini di accessibilità, motivo per cui si è scelto un sistema di puro "detection".
